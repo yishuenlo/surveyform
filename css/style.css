@@ -1,0 +1,76 @@
+/* define document colors */
+:root{
+  --bg1: #574C4F;
+  --bg2: #605C3C;
+  --main: #efdab9;
+  --select: #574c4f;
+  --accent1: #ffd152;
+  --accent2: #78b0a0;
+
+}
+
+html{
+  height: 100%;
+}
+
+body, h1, h2, p, div, label, input, textarea, select, option, main{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(var(--bg1), var(--bg2));
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  font-family: nunito;
+  font-weight: 100;
+  color: var(--main);
+}
+
+.question input, textarea, select{
+  background-color: rgba(0,0,0,0);
+}
+
+::placeholder{
+  color: rgba(239,218,185,0.5)
+}
+
+main, h1{
+  width: 60%;
+  margin: auto;
+}
+
+main{
+  margin-top: 1.5em;
+  border: 2px solid var(--main);
+  padding: 3em;
+  border-radius: 30px;
+}
+
+label{
+  font-weight: 900;
+}
+
+h1{
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  /* align-self: flex-end; */
+}
+
+.subheader{
+  color: var(--accent2);
+  font-size: 0.5em;
+}
+
+#description{
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.question{
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1em;
+}
