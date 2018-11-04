@@ -1,6 +1,6 @@
 /* define document colors */
 :root{
-  --bg1: #574C4F;
+  --bg1: #4D4B4A;
   --bg2: #535145;
   --main: #efdab9;
   --select: #574c4f;
@@ -31,7 +31,7 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   /* background-size: cover; */
-  font-family: nunito;
+  font-family: nunito, arial, sans-serif;
   font-weight: 100;
   color: var(--main);
 }
@@ -39,6 +39,10 @@ body {
 a{
   text-decoration: none;
   color: var(--accent2);
+}
+
+li{
+  list-style: none;
 }
 
 .question-group input, textarea, select{
@@ -74,13 +78,26 @@ input[type="text"],input[type="email"],input[type="number"], select{
   padding: 0.5em;
 }
 
+select option{
+  background-color: var(--bg1);
+}
+
+select{
+  display: block;
+  width: 96%;
+}
+
+.main-info input[type="text"]{
+  text-transform: capitalize;
+}
+
 option .placeholder{
   color: rgba(239,218,185,0.5);
 }
 
 input:focus{
   color: var(--accent1);
-  font-family: nunito;
+  font-family: nunito, arial, sans-serif;
 }
 
 h1{
@@ -117,11 +134,28 @@ h1{
 .question-group{
   width: 100%;
   margin: auto;
-  margin-bottom: 2em;
+  margin-top: 3em;
+}
+
+.question-group .question{
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.question-group select{
+  margin-top: 1em;
 }
 
 .main-info{
   margin-bottom: 1em;
+}
+
+#name-label, #email-label, #number-label{
+  font-family: nunito, arial, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 .left{
@@ -133,9 +167,97 @@ h1{
   width: 60%;
 }
 
+input[type="radio"] + label{
+  margin-right: 1em;
+}
+
+.checkboxes, .radio{
+  margin-left: 0.5em;
+}
+
+input[type="radio"] + .text{
+  margin-left: 0.5em;
+}
+
+/* customize the label (the container) */
+.container{
+  display: block;
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 0.5em;
+  cursor:pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* hide the browser's default checkbox */
+.container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* create custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: var(--main);
+}
+
+.radio{
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: var(--main);
+  border-radius: 50%;
+}
+
+/* on mouse-over, add a grey background color */
+/* select any .checkmark after the action of hovering over .container */
+.container:hover input ~ .checkmark, .container:hover input ~ .radio {
+  background-color: #C4BCB0;
+}
+
+/* when the checkbox is checked, add a background */
+.container input:checked ~ .checkmark, .container input:checked ~ .radio{
+  background-color: var(--accent1);
+}
+
+/* create the checkmark/indicator (hidden when not checked) */
+.checkmark:after{
+  content: "";
+  position:absolute;
+  display: none;
+}
+
+/* show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* style the checkmark/indicator */
+.container .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--bg1);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 textarea{
   width: 92%;
-  font-family: nunito;
+  font-family: nunito, arial, sans-serif;
   color: var(--accent1);
   border-radius: 10px;
   border: 1px solid var(--main);
@@ -144,13 +266,13 @@ textarea{
 
 textarea:focus{
   color: var(--accent1);
-  font-family: nunito;
+  font-family: nunito, arial, sans-serif;
 }
 
 #submit{
   width: 100%;
   height: 35px;
-  font-family: nunito;
+  font-family: nunito, arial, sans-serif;
   font-weight: 700;
   font-size: 1em;
   /* font-weight: 900; */
@@ -161,18 +283,13 @@ textarea:focus{
   background-color: var(--accent1);
   border-radius: 10px;
   border: none;
-}
-
-#name-label, #email-label, #number-label{
-  font-family: nunito;
-  font-weight: 700;
-  font-size: 1em;
-  letter-spacing: 5px;
-  text-transform: uppercase;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
 
 #submit:hover{
   background-color: #FBC02D;
+  transition: 400ms ease-out;
 }
 
 footer{
@@ -223,13 +340,46 @@ h3{
   fill: var(--accent1);
 }
 
+img{
+  display: block;
+  margin: auto;
+  bottom: 5em;
+}
+
+/* mobile view */
+@media(max-width: 375px){
+  main{
+    padding: 20px;
+    width: 76%;
+  }
+  article{
+    width: 100%;
+  }
+  #name-label, #email-label, #number-label{
+    letter-spacing: 2px;
+  }
+  .right{
+    display: block;
+  }
+}
+
+@media(min-width: 700px) and (max-width: 1199px){
+  article{
+    width: 60%;
+  }
+}
+
 @media(min-width: 1200px){
   main{
     width: 40%;
   }
 
   article{
-    width: 50%;
+    width: 60%;
+  }
+
+  .main-info input{
+    width: 65%;
   }
 
   select{
@@ -237,12 +387,6 @@ h3{
   }
 
   textarea{
-    width: 100%;
+    width: 95%;
   }
-}
-
-img{
-  display: block;
-  margin: auto;
-  bottom: 5em;
 }

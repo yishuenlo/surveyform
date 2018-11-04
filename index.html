@@ -9,25 +9,26 @@
     <h1 id="title"><span class="subheader"><a href="https://learn.freecodecamp.org/">freeCodeCamp</a></span><span class="header">Survey Form</span></h1>
     <main>
       <article class="content">
-        <p id="description">Let us know how we can improve freeCodeCamp</p>
+        <p id="description">Let us know how we can improve freeCodeCamp!</p>
         <form id="survey-form" action="index.html" method="post">
           <div class="question-group">
             <div class="main-info">
-              <label id="name-label" class="left" for="name">Name </label>
-              <input id="name" type="text" name="name" placeholder="enter your name" required>
+              <label id="name-label" class="left" for="name">Name* </label>
+              <input id="name" type="text" name="name" placeholder="enter Your Name" required>
             </div>
             <div class="main-info">
-              <label id="email-label" class="left" for="email">Email </label>
-              <input id="email" type="email" name="email" placeholder="enter your email" required>
+              <label id="email-label" class="left" for="email">Email* </label>
+              <input id="email" type="email" name="email" placeholder="Enter Your Email" required>
             </div>
             <div class="main-info">
-              <label id="number-label" class="left" for="number">Age </label>
-              <input id="number" type="number" name="age" value="age" placeholder="age" required min="10" max="100">
+              <label id="number-label" class="left" for="number">Age* </label>
+              <input id="number" type="number" name="age" value="age" placeholder="Age" required min="10" max="100">
             </div>
           </div>
 
+          <!-- question current role -->
           <div class="question-group">
-            <label for="dropdown">Which option best describes your current role?</label>
+            <label for="dropdown" class="question">Which option best describes your current role?</label>
             <select id="dropdown" placeholder="select an option">
               <option value="select" class="placeholder" disabled value selected>select an option</option>
               <option value="student">Student</option>
@@ -37,20 +38,37 @@
               <option value="other">Other</option>
             </select>
           </div>
+
+          <!-- question recommendation- radio -->
           <div class="question-group">
-            <p>How likely is that you would recommend freeCodeCamp to a friend?</p>
-            <input id="definitely" type="radio" name="recommendation" value="Definitely">
-            <label for="definitely">Definitely</label>
+            <p class="question">How likely is that you would recommend freeCodeCamp to a friend?</p>
+            <ul>
+              <li>
+                <label class="container">
+                  <input type="radio" name="radio-btns" value="1">
+                  <span class="text">Definitely</span>
+                  <span class="radio"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="radio" name="radio-btns" value="2">
+                  <span class="text">Maybe</span>
+                  <span class="radio"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="radio" name="radio-btns" value="2">
+                  <span class="text">Not Sure</span>
+                  <span class="radio"></span>
+                </label>
+              </li>
+            </ul>
 
-            <input id="maybe" type="radio" name="recommendation" value="maybe">
-            <label for="maybe">Maybe</label>
-
-            <input id="notsure" type="radio" name="recommendation" value="notsure">
-            <label for="notsure">Not Sure</label>
-
-          </div>
+          <!-- question what do you like -->
           <div class="question-group">
-            <label for="dropdown-fav">What do you like most in FCC?</label>
+            <label for="dropdown-fav" class="question">What do you like most in FCC?</label>
             <select id="dropdown-fav">
               <option value="select" class="placeholder" disabled value selected>select an option</option>
               <option value="challenges">Challenges</option>
@@ -59,45 +77,99 @@
               <option value="Open Source">Open Source</option>
             </select>
           </div>
-          <div class="question-group checkboxes">
-            <p>Things that should be improved in the future (Check all that apply):</p>
-            <input id="front-end" type="checkbox" name="front-end" value="checkbox">
-            <label for="front-end">Front-end Projects</label>
 
-            <input id="back-end" type="checkbox" name="back-end" value="checkbox">
-            <label for="back-end">Back-end Projects</label>
+          <!-- questions improvement -->
+          <div class="question-group">
+            <p class="question">Things that should be improved in the future (Check all that apply):</p>
+            <ul class="checkboxes">
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="1">
+                  <span class="text">Front-End Projects</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="2">
+                  <span class="text">Back-End Projects</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="3">
+                  <span class="text">Data Visualization</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="4">
+                  <span class="text">Challenges</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="5">
+                  <span class="text">Open Source Community</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="6">
+                  <span class="text">Gitter Help Rooms</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="7">
+                  <span class="text">Videos</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="8">
+                  <span class="text">City Meetups</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="9">
+                  <span class="text">Wiki</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="10">
+                  <span class="text">Forum</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="container">
+                  <input type="checkbox" name="prefer" value="11">
+                  <span class="text">Additional Courses</span>
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+            </ul>
 
-            <input id="data-viz" type="checkbox" name="data-viz" value="checkbox">
-            <label for="data-viz">Data Visualization</label>
 
-            <input id="challenges" type="checkbox" name="challenges" value="checkbox">
-            <label for="challenges">Challenges</label>
 
-            <input id="opensource" type="checkbox" name="opensource" value="checkbox">
-            <label for="opensource">Open Source Community</label>
 
-            <input id="gitter" type="checkbox" name="gitter" value="checkbox">
-            <label for="gitter">Gitter Help Rooms</label>
-
-            <input id="videos" type="checkbox" name="videos" value="checkbox">
-            <label for="videos">Videos</label>
-
-            <input id="meetups" type="checkbox" name="meetups" value="checkbox">
-            <label for="meetups">City Meetups</label>
-
-            <input id="wiki" type="checkbox" name="wiki" value="checkbox">
-            <label for="wiki">Wiki</label>
-
-            <input id="forum" type="checkbox" name="forum" value="checkbox">
-            <label for="forum">Forum</label>
-
-            <input id="addcourses" type="checkbox" name="addcourses" value="checkbox">
-            <label for="addcourses">Additional Courses</label>
 
           </div>
 
+          <!-- question suggestions -->
           <div class="question-group">
-            <p>Any Comments or Suggestions?</p>
+            <p class="question">Any Comments or Suggestions?</p>
             <textarea name="comment" rows="8" cols="60" placeholder="enter your comments here"></textarea>
           </div>
 
