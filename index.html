@@ -6,22 +6,25 @@
     <title>Survey Form</title>
   </head>
   <body>
-    <h1 id="title"><span class="subheader">freeCodeCamp</span> Survey Form</h1>
+    <h1 id="title"><span class="subheader">freeCodeCamp</span><span class="header">Survey Form</span></h1>
     <main>
       <p id="description">Let us know how we can improve freeCodeCamp</p>
       <form id="survey-form" action="index.html" method="post">
         <div class="question">
-          <label id="name-label"for="name">Name: </label>
-          <input id="name" type="text" name="name" placeholder="enter your name" required>
+          <div class="main-info">
+            <label id="name-label"for="name">Name </label>
+            <input id="name" type="text" name="name" placeholder="enter your name" required>
+          </div>
+          <div class="main-info">
+            <label id="email-label" for="email">Email </label>
+            <input id="email" type="email" name="email" placeholder="enter your email" required>
+          </div>
+          <div class="main-info">
+            <label id="number-label" for="number">Age </label>
+            <input id="number" type="number" name="age" value="age" placeholder="age" required min="10" max="100">
+          </div>
         </div>
-        <div class="question">
-          <label id="email-label" for="email">Email: </label>
-          <input id="email" type="email" name="email" placeholder="enter your email" required>
-        </div>
-        <div class="question">
-          <label id="number-label" for="number">Age: </label>
-          <input id="number" type="number" name="age" value="age" placeholder="age" required min="10" max="100">
-        </div>
+
         <div class="question">
           <label for="dropdown">Which option best describes your current role?</label>
           <select id="dropdown" placeholder="select an option">
@@ -67,8 +70,22 @@
 
         <input id="submit" type="submit" name="Submit" value="Submit">
       </form>
-
     </main>
+    <footer>
+      <p class="tagline"><a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form" target="_blank">Survey Form <span class="separator">//</span> A freeCodeCamp Project</a></p>
+      <h3>Website designed and developed by Yishuen Lo</h3>
+      <ul class="social-icons-container">
+        <li class="icon-list"><a href="https://www.freecodecamp.org/yishuen" target="_blank">
+          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs></defs><title>freeCodeCamp</title><path class="icons" d="M7.21,6.78a.82.82,0,1,0-1-1.31,13.22,13.22,0,0,0,0,21.06.81.81,0,0,0,1.15-.16.81.81,0,0,0-.15-1.15,11.56,11.56,0,0,1,0-18.44ZM25.8,5.47a.83.83,0,0,0-1.15.16.81.81,0,0,0,.15,1.15,11.56,11.56,0,0,1,0,18.44.83.83,0,0,0-.16,1.15.84.84,0,0,0,.66.33.81.81,0,0,0,.49-.17,13.22,13.22,0,0,0,0-21.06ZM23,23.09H9a.83.83,0,0,0,0,1.65H23a.83.83,0,0,0,0-1.65Zm-8.44-1.63a1.71,1.71,0,0,0,.44,0,8.54,8.54,0,0,1-1.19-1.08c-1-1.38-.77-2.84.64-4.05s1.41-1.56.78-2.92a1.79,1.79,0,0,1,1.52,2,3.55,3.55,0,0,0-.06,1,.76.76,0,0,0,1,.69.7.7,0,0,0,.61-1,5.21,5.21,0,0,1-.08-.57l.23-.08a8.15,8.15,0,0,1,.72,1.41c.51,1.65-.54,2.77-1.55,3.92,1.25.24,3.05-1.71,3.41-3.53.55-2.71-.93-6.06-2.95-6.5a11.27,11.27,0,0,1,.45,1.07c.13.43.23.92-.33,1.12s-.78-.28-.89-.71c-.16-.63-.26-1.28-.39-1.93a4.11,4.11,0,0,0-3-3.35,7.63,7.63,0,0,0-1.3-.1c1.72,2,1.79,2.87.53,5-.51.88-1.06,1.73-1.58,2.6C9.7,17.59,11.88,20.66,14.54,21.46Z"/></svg>
+        </a></li>
+        <li class="icon-list"><a href="https://github.com/yishuenlo" target="_blank">
+          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.57 32"><defs></defs><title>Github</title><path class="icons" d="M16.29,1a15,15,0,0,0-4.75,29.23c.75.14,1-.32,1-.72s0-1.3,0-2.55c-4.17.91-5.05-2-5.05-2a4.05,4.05,0,0,0-1.67-2.2c-1.36-.93.1-.91.1-.91a3.16,3.16,0,0,1,2.3,1.55,3.19,3.19,0,0,0,4.37,1.24,3.16,3.16,0,0,1,1-2c-3.33-.38-6.83-1.67-6.83-7.41a5.8,5.8,0,0,1,1.54-4,5.4,5.4,0,0,1,.15-4s1.26-.4,4.12,1.54a14.7,14.7,0,0,1,3.76-.51A14.68,14.68,0,0,1,20,8.76c2.87-1.94,4.12-1.54,4.12-1.54a5.35,5.35,0,0,1,.15,4,5.8,5.8,0,0,1,1.54,4c0,5.76-3.5,7-6.84,7.4a3.61,3.61,0,0,1,1,2.78c0,2,0,3.62,0,4.11s.27.87,1,.72A15,15,0,0,0,16.29,1Z"/></svg>
+        </a></li>
+        <li class="icon-list"><a href="https://www.linkedin.com/in/yishuen-lo" target="_blank">
+          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.57 32"><defs></defs><title>LinkedIn</title><path class="icons" d="M16.29,1a15,15,0,1,0,15,15A15,15,0,0,0,16.29,1Zm-5,24.15H7.58V13.09h3.67ZM9.37,11.44a2.31,2.31,0,0,1-2.25-2.3A2.35,2.35,0,0,1,9.39,6.85,2.37,2.37,0,0,1,11.7,9.21,2.33,2.33,0,0,1,9.37,11.44ZM25.44,25.11H21.67c0-1.8,0-3.61,0-5.42a17,17,0,0,0-.05-1.89c-.09-.88-.43-1.61-1.43-1.77a2,2,0,0,0-2.29,1.2A4.91,4.91,0,0,0,17.53,19c-.05,2,0,4.05,0,6.15H13.76v-12h3.48c0,.46,0,.88.07,1.43l.67-.61a4.93,4.93,0,0,1,5.47-.78,4,4,0,0,1,2,3.78C25.49,19.6,25.44,22.32,25.44,25.11Z"/></svg>
+        </a></li>
+      </ul>
+    </footer>
 
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" charset="utf-8"></script>
   </body>
