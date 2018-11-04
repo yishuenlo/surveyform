@@ -17,18 +17,20 @@ html{
   height: 100%;
 }
 
-body, h1, h2, h3, p, div, label, input, textarea, select, option, main, footer, ul, li{
+body, h1, h2, h3, p, div, label, input, textarea, select, option, main, footer, ul, li, img{
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-image: linear-gradient(to bottom, var(--bg1), var(--bg2));
+  background-image: url(../img/background-image.png);
+  /* background-position: center; */
+  /* background-image: linear-gradient(to bottom, var(--bg1), var(--bg2)); */
   /* background-image: radial-gradient(ellipse closest-side at 50% 50%, #393e44, #36383b 25%, #343233); */
-  background-color: var(--bg2);
-  height: 100%;
+  /* background-color: var(--bg2); */
   margin: 0;
   background-repeat: no-repeat;
+  /* background-size: cover; */
   font-family: nunito;
   font-weight: 100;
   color: var(--main);
@@ -39,12 +41,12 @@ a{
   color: var(--accent2);
 }
 
-.question input, textarea, select{
+.question-group input, textarea, select{
   background-color: rgba(0,0,0,0);
 }
 
 ::placeholder{
-  color: rgba(239,218,185,0.5)
+  color: rgba(239,218,185,0.5);
 }
 
 main, h1{
@@ -59,12 +61,21 @@ main{
   border-radius: 30px;
 }
 
+article{
+  width: 100%;
+  margin: auto;
+}
+
 input[type="text"],input[type="email"],input[type="number"], select{
   color: var(--accent1);
   width: 50%;
   border-radius: 10px;
   border: 1px solid var(--main);
   padding: 0.5em;
+}
+
+option .placeholder{
+  color: rgba(239,218,185,0.5);
 }
 
 input:focus{
@@ -93,12 +104,17 @@ h1{
   margin-bottom: 1em;
 }
 
+.subheader a:hover{
+  color: var(--accent1);
+  transition: 400ms ease-in;
+}
+
 #description{
   text-align: center;
   margin-bottom: 3em;
 }
 
-.question{
+.question-group{
   width: 100%;
   margin: auto;
   margin-bottom: 2em;
@@ -106,6 +122,15 @@ h1{
 
 .main-info{
   margin-bottom: 1em;
+}
+
+.left{
+  display: inline-block;
+  width: 30%;
+}
+
+.main-info input{
+  width: 60%;
 }
 
 textarea{
@@ -151,9 +176,14 @@ textarea:focus{
 }
 
 footer{
+  display: relative;
   width: 90%;
   text-align: center;
-  margin: 1em auto 20em auto;
+  margin: 1em auto 0 auto;
+  padding-bottom: 10em;
+  background-image: url(../img/camp.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .tagline{
@@ -189,6 +219,7 @@ h3{
 }
 
 .icon-list:hover .icons{
+  transition: 400ms ease-in;
   fill: var(--accent1);
 }
 
@@ -197,7 +228,21 @@ h3{
     width: 40%;
   }
 
+  article{
+    width: 50%;
+  }
+
+  select{
+    width: 100%;
+  }
+
   textarea{
     width: 100%;
   }
+}
+
+img{
+  display: block;
+  margin: auto;
+  bottom: 5em;
 }

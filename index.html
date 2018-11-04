@@ -6,70 +6,105 @@
     <title>Survey Form</title>
   </head>
   <body>
-    <h1 id="title"><span class="subheader">freeCodeCamp</span><span class="header">Survey Form</span></h1>
+    <h1 id="title"><span class="subheader"><a href="https://learn.freecodecamp.org/">freeCodeCamp</a></span><span class="header">Survey Form</span></h1>
     <main>
-      <p id="description">Let us know how we can improve freeCodeCamp</p>
-      <form id="survey-form" action="index.html" method="post">
-        <div class="question">
-          <div class="main-info">
-            <label id="name-label"for="name">Name </label>
-            <input id="name" type="text" name="name" placeholder="enter your name" required>
+      <article class="content">
+        <p id="description">Let us know how we can improve freeCodeCamp</p>
+        <form id="survey-form" action="index.html" method="post">
+          <div class="question-group">
+            <div class="main-info">
+              <label id="name-label" class="left" for="name">Name </label>
+              <input id="name" type="text" name="name" placeholder="enter your name" required>
+            </div>
+            <div class="main-info">
+              <label id="email-label" class="left" for="email">Email </label>
+              <input id="email" type="email" name="email" placeholder="enter your email" required>
+            </div>
+            <div class="main-info">
+              <label id="number-label" class="left" for="number">Age </label>
+              <input id="number" type="number" name="age" value="age" placeholder="age" required min="10" max="100">
+            </div>
           </div>
-          <div class="main-info">
-            <label id="email-label" for="email">Email </label>
-            <input id="email" type="email" name="email" placeholder="enter your email" required>
+
+          <div class="question-group">
+            <label for="dropdown">Which option best describes your current role?</label>
+            <select id="dropdown" placeholder="select an option">
+              <option value="select" class="placeholder" disabled value selected>select an option</option>
+              <option value="student">Student</option>
+              <option value="Full-Time Job">Full-Time Job</option>
+              <option value="Full-Time Learner">Full-Time Learner</option>
+              <option value="Prefer not to say">Prefer no to say</option>
+              <option value="other">Other</option>
+            </select>
           </div>
-          <div class="main-info">
-            <label id="number-label" for="number">Age </label>
-            <input id="number" type="number" name="age" value="age" placeholder="age" required min="10" max="100">
+          <div class="question-group">
+            <p>How likely is that you would recommend freeCodeCamp to a friend?</p>
+            <input id="definitely" type="radio" name="recommendation" value="Definitely">
+            <label for="definitely">Definitely</label>
+
+            <input id="maybe" type="radio" name="recommendation" value="maybe">
+            <label for="maybe">Maybe</label>
+
+            <input id="notsure" type="radio" name="recommendation" value="notsure">
+            <label for="notsure">Not Sure</label>
+
           </div>
-        </div>
+          <div class="question-group">
+            <label for="dropdown-fav">What do you like most in FCC?</label>
+            <select id="dropdown-fav">
+              <option value="select" class="placeholder" disabled value selected>select an option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projects">Projects</option>
+              <option value="Community">Community</option>
+              <option value="Open Source">Open Source</option>
+            </select>
+          </div>
+          <div class="question-group checkboxes">
+            <p>Things that should be improved in the future (Check all that apply):</p>
+            <input id="front-end" type="checkbox" name="front-end" value="checkbox">
+            <label for="front-end">Front-end Projects</label>
 
-        <div class="question">
-          <label for="dropdown">Which option best describes your current role?</label>
-          <select id="dropdown" placeholder="select an option">
-            <option value="select" class="placeholder" disabled value>select an option</option>
-            <option value="student">Student</option>
-            <option value="Full-Time Job">Full-Time Job</option>
-            <option value="Full-Time Learner">Full-Time Learner</option>
-            <option value="Prefer not to say">Prefer no to say</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="question">
-          <p>How likely is that you would recommend freeCodeCamp to a friend?</p>
-          <label for="definitely">Definitely</label>
-          <input id="definitely" type="radio" name="recommendation" value="Definitely">
-          <label for="maybe">Maybe</label>
-          <input id="maybe" type="radio" name="recommendation" value="maybe">
-          <label for="notsure">Not Sure</label>
-          <input id="notsure" type="radio" name="recommendation" value="notsure">
-        </div>
-        <div class="question">
-          <label for="dropdown-fav">What do you like most in FCC?</label>
-          <select id="dropdown-fav">
-            <option value="select" class="placeholder" disabled value>select an option</option>
-            <option value="challenges">Challenges</option>
-            <option value="projects">Projects</option>
-            <option value="Community">Community</option>
-            <option value="Open Source">Open Source</option>
-          </select>
-        </div>
-        <div class="question">
-          <p>Things that should be improved in the future (Check all that apply):</p>
-          <input id="front-end" type="checkbox" name="front-end" value="checkbox">
-          <label for="front-end">Front-end Projects</label>
-          <input id="back-end" type="checkbox" name="back-end" value="checkbox">
-          <label for="back-end">Back-end Projects</label>
-        </div>
+            <input id="back-end" type="checkbox" name="back-end" value="checkbox">
+            <label for="back-end">Back-end Projects</label>
 
-        <div class="question">
-          <p>Any Comments or Suggestions?</p>
-          <textarea name="comment" rows="8" cols="60" placeholder="enter your comments here"></textarea>
-        </div>
+            <input id="data-viz" type="checkbox" name="data-viz" value="checkbox">
+            <label for="data-viz">Data Visualization</label>
 
-        <input id="submit" type="submit" name="Submit" value="Submit">
-      </form>
+            <input id="challenges" type="checkbox" name="challenges" value="checkbox">
+            <label for="challenges">Challenges</label>
+
+            <input id="opensource" type="checkbox" name="opensource" value="checkbox">
+            <label for="opensource">Open Source Community</label>
+
+            <input id="gitter" type="checkbox" name="gitter" value="checkbox">
+            <label for="gitter">Gitter Help Rooms</label>
+
+            <input id="videos" type="checkbox" name="videos" value="checkbox">
+            <label for="videos">Videos</label>
+
+            <input id="meetups" type="checkbox" name="meetups" value="checkbox">
+            <label for="meetups">City Meetups</label>
+
+            <input id="wiki" type="checkbox" name="wiki" value="checkbox">
+            <label for="wiki">Wiki</label>
+
+            <input id="forum" type="checkbox" name="forum" value="checkbox">
+            <label for="forum">Forum</label>
+
+            <input id="addcourses" type="checkbox" name="addcourses" value="checkbox">
+            <label for="addcourses">Additional Courses</label>
+
+          </div>
+
+          <div class="question-group">
+            <p>Any Comments or Suggestions?</p>
+            <textarea name="comment" rows="8" cols="60" placeholder="enter your comments here"></textarea>
+          </div>
+
+          <input id="submit" type="submit" name="Submit" value="Submit">
+        </form>
+      </article>
+
     </main>
     <footer>
       <p class="tagline"><a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form" target="_blank">Survey Form <span class="separator">//</span> A freeCodeCamp Project</a></p>
@@ -85,7 +120,9 @@
           <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.57 32"><defs></defs><title>LinkedIn</title><path class="icons" d="M16.29,1a15,15,0,1,0,15,15A15,15,0,0,0,16.29,1Zm-5,24.15H7.58V13.09h3.67ZM9.37,11.44a2.31,2.31,0,0,1-2.25-2.3A2.35,2.35,0,0,1,9.39,6.85,2.37,2.37,0,0,1,11.7,9.21,2.33,2.33,0,0,1,9.37,11.44ZM25.44,25.11H21.67c0-1.8,0-3.61,0-5.42a17,17,0,0,0-.05-1.89c-.09-.88-.43-1.61-1.43-1.77a2,2,0,0,0-2.29,1.2A4.91,4.91,0,0,0,17.53,19c-.05,2,0,4.05,0,6.15H13.76v-12h3.48c0,.46,0,.88.07,1.43l.67-.61a4.93,4.93,0,0,1,5.47-.78,4,4,0,0,1,2,3.78C25.49,19.6,25.44,22.32,25.44,25.11Z"/></svg>
         </a></li>
       </ul>
+
     </footer>
+    <!-- <img src="img/camp.png" alt="image of camp"> -->
 
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" charset="utf-8"></script>
   </body>
