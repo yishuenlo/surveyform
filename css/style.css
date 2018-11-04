@@ -27,7 +27,7 @@ body {
   /* background-position: center; */
   /* background-image: linear-gradient(to bottom, var(--bg1), var(--bg2)); */
   /* background-image: radial-gradient(ellipse closest-side at 50% 50%, #393e44, #36383b 25%, #343233); */
-  /* background-color: var(--bg2); */
+  background-color: #4C4B49;
   margin: 0;
   background-repeat: no-repeat;
   /* background-size: cover; */
