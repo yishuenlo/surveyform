@@ -390,3 +390,14 @@ img{
     width: 95%;
   }
 }
+
+.name{
+  color: var(--main);
+  font-family: "reenie beanie", sans-serif;
+  font-size: 2em;
+}
+
+.name:hover{
+  color: var(--accent2);
+  transition: 400ms ease-out;
+}
