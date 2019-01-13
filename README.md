@@ -2,7 +2,7 @@
 
 a freeCodeCamp's Responsive Web Design Project
 
-[User Stories Requirements] (https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form)
+[User Stories Requirements](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form)
 
 [Live Demo](https://yishuenlo.github.io/surveyform/)
 
