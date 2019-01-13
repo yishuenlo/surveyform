@@ -1,7 +1,11 @@
-# surveyform
+#Build a Survey Form
 
-Survey form for freeCodeCamp's Responsive Web Design Certificate
+a freeCodeCamp's Responsive Web Design Project
 
-[view live demo](https://yishuenlo.github.io/surveyform/)
+[User Stories Requirements] (https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form)
 
-[view design spec](https://xd.adobe.com/spec/ce0d6296-c4a7-4e8c-b1b6-22ed53d5a2c5/)
+[Live Demo](https://yishuenlo.github.io/surveyform/)
+
+[Design Specs](https://xd.adobe.com/spec/ce0d6296-c4a7-4e8c-b1b6-22ed53d5a2c5/)
+
+
